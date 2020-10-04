@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -403,6 +403,7 @@ MonoBehaviour:
   _barLeftPos: -400
   _barRightPos: 400
   _moveTime: 1
+  _hagglePressed: 0
 --- !u!1 &378620457
 GameObject:
   m_ObjectHideFlags: 0
@@ -1494,8 +1495,9 @@ GameObject:
   - component: {fileID: 1924433490}
   - component: {fileID: 1924433489}
   - component: {fileID: 1924433488}
+  - component: {fileID: 1924433491}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: HaggleButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1563,7 +1565,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1924433489}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1924433491}
+        m_TargetAssemblyTypeName: HaggleButton, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1924433489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1602,6 +1616,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1924433486}
   m_CullTransparentMesh: 0
+--- !u!114 &1924433491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924433486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01d9d4d2b8d1ccf43a0968189b01eefa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timeshareBeetle: {fileID: 372100914}
+  _barHash: {fileID: 935224940}
+  _clickLeftPos: -400
+  _clickRightPos: 400
 --- !u!1 &2041379854
 GameObject:
   m_ObjectHideFlags: 0

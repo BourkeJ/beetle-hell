@@ -7,13 +7,16 @@ public class TimeshareBeetle : MonoBehaviour
     private float _barPosY = 0f;
     private bool _atLeft = false;
     private float _movePos = 1f;
-
-    [SerializeField] private float _clickLeftPos = 0f;
-    [SerializeField] private float _clickRightPos = 0f;
+    
+    //[SerializeField] private float _clickLeftPos = 0f;
+    //[SerializeField] private float _clickRightPos = 0f;
     [SerializeField] private RectTransform _barHash = null;
     [SerializeField] private float _barLeftPos = 0f;
     [SerializeField] private float _barRightPos = 10f;
     [SerializeField] private float _moveTime = 1f;
+
+    public bool _hagglePressed = false;
+
     void Start()
     {
         _barPosY = _barHash.anchoredPosition.y;
@@ -40,9 +43,9 @@ public class TimeshareBeetle : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
-        if (Input.GetMouseButtonDown(0) && _barHash.anchoredPosition.x >= _clickLeftPos && _barHash.anchoredPosition.x <= _clickRightPos) 
+        if (_hagglePressed == true && _barHash.anchoredPosition.x >= _clickLeftPos && _barHash.anchoredPosition.x <= _clickRightPos) 
         {
             print("ya");
             //_animator.SetTrigger("Pressed");
@@ -52,5 +55,6 @@ public class TimeshareBeetle : MonoBehaviour
             //_animator.SetTrigger("Goofed");
             //_camAnim.SetTrigger("Goofed");
         }
-    }
+    }*/
+
 }
