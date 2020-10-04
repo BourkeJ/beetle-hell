@@ -156,7 +156,7 @@ public class DungBeetleMove : MonoBehaviour
                     //_bar.SetActive(true);
                     _camAnim.SetTrigger("Done");
                     _animator.SetTrigger("Done");
-                    if(_jokeIndex < _dadJokes.Length){
+                    if(_jokeIndex < _dadJokes.Length - 1){
                         _jokeIndex += 1;
                     }else{
                         _jokeIndex = 0;
