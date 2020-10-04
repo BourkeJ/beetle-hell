@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TimeshareBeetle : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class TimeshareBeetle : MonoBehaviour
     [SerializeField] private float _barLeftPos = 0f;
     [SerializeField] private float _barRightPos = 10f;
     [SerializeField] private float _moveTime = 1f;
+    [SerializeField] private Text _price = null;
 
     public bool _hagglePressed = false;
 
@@ -22,7 +24,7 @@ public class TimeshareBeetle : MonoBehaviour
         _barPosY = _barHash.anchoredPosition.y;
     }
 
-    void FixedUpdate()
+    void Update()
     {
         // bar hash osccilation
         if(_barLeftPos <= _barHash.anchoredPosition.x + 1f && _barLeftPos >= _barHash.anchoredPosition.x - 1f)
@@ -40,21 +42,14 @@ public class TimeshareBeetle : MonoBehaviour
         }
         
         _barHash.anchoredPosition = new Vector2 (Mathf.Lerp(_barLeftPos, _barRightPos, _movePos), _barPosY);
-    }
 
-    // Update is called once per frame
-    /*void Update()
-    {
-        if (_hagglePressed == true && _barHash.anchoredPosition.x >= _clickLeftPos && _barHash.anchoredPosition.x <= _clickRightPos) 
-        {
-            print("ya");
-            //_animator.SetTrigger("Pressed");
-            //_camAnim.SetTrigger("Pressed");
-        }else if(Input.GetMouseButtonDown(0) && (_barHash.anchoredPosition.x <= _clickLeftPos || _barHash.anchoredPosition.x >= _clickRightPos)){
-            print("nah");
-            //_animator.SetTrigger("Goofed");
-            //_camAnim.SetTrigger("Goofed");
+        //reset price when haggle button pressed
+        if (_hagglePressed == true){
+            int priceNum = Random.Range(1000, 100000000);
+            _price.text = priceNum.ToString();
+            _hagglePressed = false;
         }
-    }*/
 
+
+    }
 }
