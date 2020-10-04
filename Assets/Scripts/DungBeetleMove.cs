@@ -29,6 +29,9 @@ public class DungBeetleMove : MonoBehaviour
     [SerializeField] private int _maxGoof = 3;
 
     [SerializeField] private Animator _camAnim = null;
+    [SerializeField] private Animator _dadPushAnim = null;
+    [SerializeField] private Animator _ballPushAnim = null;
+    
     
     // Start is called before the first frame update
     void Awake()
@@ -70,9 +73,13 @@ public class DungBeetleMove : MonoBehaviour
         {
             _animator.SetTrigger("Pressed");
             _camAnim.SetTrigger("Pressed");
+            _dadPushAnim.SetTrigger("Pressed");
+            _ballPushAnim.SetTrigger("Pressed");
         }else if(Input.GetMouseButtonDown(0) && (_barHash.anchoredPosition.x <= _clickLeftPos || _barHash.anchoredPosition.x >= _clickRightPos)){
             _animator.SetTrigger("Goofed");
             _camAnim.SetTrigger("Goofed");
+            _dadPushAnim.SetTrigger("Goofed");
+            _ballPushAnim.SetTrigger("Goofed");
             _goofIndex += 1;
         }
 
