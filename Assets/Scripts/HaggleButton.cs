@@ -9,6 +9,7 @@ public class HaggleButton : MonoBehaviour
     [SerializeField] private RectTransform _barHash = null;
     [SerializeField] private float _clickLeftPos = 0f;
     [SerializeField] private float _clickRightPos = 0f;
+
     private Button _haggleButton = null;
 
     void Awake()
@@ -29,7 +30,6 @@ public class HaggleButton : MonoBehaviour
     public void OnClick()
     {
         _timeshareBeetle._hagglePressed = true;
-        print("yes");
     }
 
 }

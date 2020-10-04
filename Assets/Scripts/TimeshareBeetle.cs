@@ -45,7 +45,7 @@ public class TimeshareBeetle : MonoBehaviour
 
         //reset price when haggle button pressed
         if (_hagglePressed == true){
-            int priceNum = Random.Range(1000, 100000000);
+            float priceNum = Random.Range(1000, 10000000);
             _price.text = priceNum.ToString();
             _hagglePressed = false;
         }
