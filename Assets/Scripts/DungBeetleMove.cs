@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DungBeetleMove : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class DungBeetleMove : MonoBehaviour
     private float _dadTimer = 0f;
     private float _kidTimer = 0f;
     private int _pressIndex = 0;
+    private int _jokeIndex = 0;
 
     [SerializeField] private float _clickLeftPos = 0f;
     [SerializeField] private float _clickRightPos = 0f;
@@ -41,6 +43,12 @@ public class DungBeetleMove : MonoBehaviour
     [SerializeField] private Animator _camAnim = null;
     [SerializeField] private Animator _dadPushAnim = null;
     [SerializeField] private Animator _ballPushAnim = null;
+
+    [SerializeField] private string[] _dadJokes = null;
+    [SerializeField] private string[] _dadUSuck = null;
+    [SerializeField] private Text _dadText = null;
+    [SerializeField] private Text _kidText = null;
+
     
     
     // Start is called before the first frame update
@@ -131,6 +139,8 @@ public class DungBeetleMove : MonoBehaviour
         }
 
         if(_pressIndex >= _maxPress){
+            _dadText.text = _dadJokes[_jokeIndex];
+            _kidText.text = _dadUSuck[_jokeIndex];
             _dadDialogue.SetActive(true);
             //_bar.SetActive(false);
             _dadTimer -= Time.deltaTime;
@@ -146,6 +156,11 @@ public class DungBeetleMove : MonoBehaviour
                     //_bar.SetActive(true);
                     _camAnim.SetTrigger("Done");
                     _animator.SetTrigger("Done");
+                    if(_jokeIndex < _dadJokes.Length){
+                        _jokeIndex += 1;
+                    }else{
+                        _jokeIndex = 0;
+                    }
                     _dadTimer = _dadWaitTime;
                     _kidTimer = _kidWaitTime;
                 }
