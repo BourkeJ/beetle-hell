@@ -10,6 +10,10 @@ public class DungBeetleMove : MonoBehaviour
     private float _movePos = 1f;
     private int _goofIndex = 0;
     private float _doorTimer = 0f;
+    private float _dadTimer = 0f;
+    private float _kidTimer = 0f;
+    private int _pressIndex = 0;
+
     [SerializeField] private float _clickLeftPos = 0f;
     [SerializeField] private float _clickRightPos = 0f;
 
@@ -25,8 +29,14 @@ public class DungBeetleMove : MonoBehaviour
     //[SerializeField] private float _clickRightPosTransform = null;
 
     [SerializeField] private GameObject _doorGlow = null;
+    [SerializeField] private GameObject _dadDialogue = null;
+    [SerializeField] private GameObject _kidDialogue = null;
     [SerializeField] private float _doorWaitTime = 0f;
+    [SerializeField] private float _dadWaitTime = 0f;
+    [SerializeField] private float _kidWaitTime = 0f;
     [SerializeField] private int _maxGoof = 3;
+    [SerializeField] private int _maxPress = 7;
+    [SerializeField] private GameObject _bar = null;
 
     [SerializeField] private Animator _camAnim = null;
     [SerializeField] private Animator _dadPushAnim = null;
@@ -40,6 +50,8 @@ public class DungBeetleMove : MonoBehaviour
         _barPosY = _barHash.anchoredPosition.y;
         _doorGlow.SetActive(false);
         _doorTimer = _doorWaitTime;
+        _dadTimer = _dadWaitTime;
+        _kidTimer = _kidWaitTime;
 
         //_clickLeftPos = _clickLeftPosTransform.anchoredPosition.x;
         //_clickRightPos = _clickRightPosTransform.anchoredPosition.x;
@@ -75,12 +87,15 @@ public class DungBeetleMove : MonoBehaviour
             _camAnim.SetTrigger("Pressed");
             _dadPushAnim.SetTrigger("Pressed");
             _ballPushAnim.SetTrigger("Pressed");
+            _pressIndex += 1;
+            print(_pressIndex);
         }else if(Input.GetMouseButtonDown(0) && (_barHash.anchoredPosition.x <= _clickLeftPos || _barHash.anchoredPosition.x >= _clickRightPos)){
             _animator.SetTrigger("Goofed");
             _camAnim.SetTrigger("Goofed");
             _dadPushAnim.SetTrigger("Goofed");
             _ballPushAnim.SetTrigger("Goofed");
             _goofIndex += 1;
+            _pressIndex -= 1;
         }
 
         //if you don't click for three times, beetle boss comes out
@@ -106,13 +121,34 @@ public class DungBeetleMove : MonoBehaviour
             _inGreenRight = false;
         }*/
         if(_goofIndex >= _maxGoof){
-
             _doorGlow.SetActive(true);
             _doorTimer -= Time.deltaTime;
             if(_doorTimer <= 0f){
                 _goofIndex = 0;
                 _doorGlow.SetActive(false);
                 _doorTimer = _doorWaitTime;
+            }
+        }
+
+        if(_pressIndex >= _maxPress){
+            _dadDialogue.SetActive(true);
+            //_bar.SetActive(false);
+            _dadTimer -= Time.deltaTime;
+            if(_dadTimer <= 0f){
+                _kidDialogue.SetActive(true);
+                _kidTimer -= Time.deltaTime;
+                if(_kidTimer <= 0f){
+                    _pressIndex = 0;
+                    _dadDialogue.SetActive(false);
+                    _kidDialogue.SetActive(false);
+                    _dadPushAnim.SetTrigger("Goofed");
+                    _ballPushAnim.SetTrigger("Goofed");
+                    //_bar.SetActive(true);
+                    _camAnim.SetTrigger("Done");
+                    _animator.SetTrigger("Done");
+                    _dadTimer = _dadWaitTime;
+                    _kidTimer = _kidWaitTime;
+                }
             }
         }
     }
