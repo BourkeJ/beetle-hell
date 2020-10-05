@@ -11,14 +11,23 @@ public class TimeshareBeetle : MonoBehaviour
     [SerializeField] private string _beetleDialogue = null;
     [SerializeField] private float _beetleWaitTime = 10f;
     [SerializeField] private string _sceneName = "TimeshareBeetle";
+    [SerializeField] private GameObject _offerButton = null;
 
     public bool _hagglePressed = false;
     public bool _offerAccepted = false;
+
+    //private bool _offerButtonOn = false;
+
+    void Awake()
+    {
+        _offerButton.SetActive(false);
+    }
 
     void Update()
     {
         //reset price when haggle button pressed
         if (_hagglePressed == true){
+            _offerButton.SetActive(true);
             float priceNum = Random.Range(1000, 10000000);
             _price.text = priceNum.ToString();
             _hagglePressed = false;

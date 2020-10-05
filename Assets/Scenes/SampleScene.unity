@@ -897,11 +897,13 @@ MonoBehaviour:
   _dadPushAnim: {fileID: 1973747979}
   _ballPushAnim: {fileID: 834270576}
   _dadJokes:
-  - Dad joke 1
-  - Dad joke 2
+  - Why don't crabs give to charity? Because they're shellfish.
+  - "What\u2019s the best way to watch a fly-fishing tournament? Live stream."
+  - hat do you call a fish with no eye? A fsh.
   _dadUSuck:
-  - Kid Joke 1
-  - Kid Joke 2
+  - Oh my satan.
+  - You're so lame!!
+  - Just get this stupid timeshare thing!! You're embarassing me!
   _dadText: {fileID: 1368018975}
   _kidText: {fileID: 283174038}
 --- !u!1 &310357557

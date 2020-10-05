@@ -387,6 +387,7 @@ MonoBehaviour:
   _beetleDialogue: You did it!
   _beetleWaitTime: 3
   _sceneName: EndScene
+  _offerButton: {fileID: 966721220}
   _hagglePressed: 0
   _offerAccepted: 0
 --- !u!1 &402170170
@@ -1813,9 +1814,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _timeshareBeetle: {fileID: 372100914}
   _beetleDialogue:
-  - Ass
-  - Dick
-  - You Know ;)
+  - Hmm.. I suppose if we put these numbers here..
+  - Can't do much else about it.....
+  - Sorry not sorry
+  - This hurts me more than it hurts you
+  - I want your money but I see your point......
   _beetleDialogueText: {fileID: 908768755}
 --- !u!1 &2041379854
 GameObject:
