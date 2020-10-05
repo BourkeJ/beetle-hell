@@ -480,7 +480,7 @@ RectTransform:
   m_LocalScale: {x: 0.1557528, y: 0.9894312, z: 0.9894312}
   m_Children: []
   m_Father: {fileID: 260037120}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -703,6 +703,7 @@ RectTransform:
   - {fileID: 347006716}
   - {fileID: 822484706}
   - {fileID: 962532851}
+  - {fileID: 1086549676}
   - {fileID: 225331944}
   - {fileID: 940415308}
   m_Father: {fileID: 0}
@@ -844,8 +845,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000003874302, y: 40.5}
-  m_SizeDelta: {x: 93.193054, y: 60.7762}
+  m_AnchoredPosition: {x: -0.000003874302, y: 38.67}
+  m_SizeDelta: {x: 93.193054, y: 73.83731}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &270507976
 MonoBehaviour:
@@ -1697,7 +1698,7 @@ RectTransform:
   m_Children:
   - {fileID: 1651961747}
   m_Father: {fileID: 260037120}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2184,6 +2185,85 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1086549675
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1086549676}
+  - component: {fileID: 1086549678}
+  - component: {fileID: 1086549677}
+  m_Layer: 5
+  m_Name: Text (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1086549676
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086549675}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 260037120}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 40.4, y: -78.6}
+  m_SizeDelta: {x: 93.193054, y: 15.81366}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1086549677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086549675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 31
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 42
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: Finish
+--- !u!222 &1086549678
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086549675}
+  m_CullTransparentMesh: 0
 --- !u!1 &1223911031
 GameObject:
   m_ObjectHideFlags: 0
@@ -2505,8 +2585,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
-  m_Sprite: {fileID: 2530564911472380330, guid: de68d1ea5edfcf94a8fbc2d46f4e278d,
+  m_SortingOrder: 9
+  m_Sprite: {fileID: 1763989116612304091, guid: de68d1ea5edfcf94a8fbc2d46f4e278d,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2549,7 +2629,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.21, y: 2.56}
+    oldSize: {x: 7.55, y: 3.24}
     newSize: {x: 15.943416, y: 10.17}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2990,6 +3070,8 @@ MonoBehaviour:
   _clickLeftPos: -60
   _clickRightPos: 60
   _slutAnim: {fileID: 709301745}
+  _buttonTime: 1
+  _buttonText: {fileID: 1086549675}
 --- !u!95 &1663761238
 Animator:
   serializedVersion: 3
