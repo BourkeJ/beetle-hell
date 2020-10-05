@@ -49,6 +49,13 @@ public class DungBeetleMove : MonoBehaviour
     [SerializeField] private Text _dadText = null;
     [SerializeField] private Text _kidText = null;
 
+
+    /*[SerializeField] private SpriteRenderer _beetle = null;
+    [SerializeField] private SpriteRenderer _ball = null;
+    [SerializeField] private SpriteRenderer _hill = null;
+    [SerializeField] private SpriteRenderer _office = null;
+    //[SerializeField] private float _color = null;*/
+ 
     
     
     // Start is called before the first frame update

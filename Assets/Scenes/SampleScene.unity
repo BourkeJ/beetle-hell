@@ -904,6 +904,10 @@ MonoBehaviour:
   - Kid Joke 2
   _dadText: {fileID: 1368018975}
   _kidText: {fileID: 283174038}
+  _beetle: {fileID: 1973747980}
+  _ball: {fileID: 834270574}
+  _hill: {fileID: 1803071395}
+  _office: {fileID: 754610534}
 --- !u!1 &328338005
 GameObject:
   m_ObjectHideFlags: 0
