@@ -12,7 +12,7 @@ public class TimeshareBeetle : MonoBehaviour
     [SerializeField] private float _beetleWaitTime = 10f;
     [SerializeField] private string _sceneName = "TimeshareBeetle";
     [SerializeField] private GameObject _offerButton = null;
-    [SerializeField] private AudioSource _cachingTwo = null;
+    //[SerializeField] private AudioSource _cachingTwo = null;
 
 
     public bool _hagglePressed = false;
