@@ -89,7 +89,7 @@ public class DungBeetleMove : MonoBehaviour
     void Update()
     {
         //on click, beetle dad moves
-        if (Input.GetMouseButtonDown(0) && _barHash.anchoredPosition.x >= _clickLeftPos && _barHash.anchoredPosition.x <= _clickRightPos) 
+        if (Input.GetMouseButtonDown(0) && _barHash.anchoredPosition.x >= _clickLeftPos && _barHash.anchoredPosition.x <= _clickRightPos && _pressIndex < _maxPress) 
         {
             _animator.SetTrigger("Pressed");
             _camAnim.SetTrigger("Pressed");
@@ -97,7 +97,7 @@ public class DungBeetleMove : MonoBehaviour
             _ballPushAnim.SetTrigger("Pressed");
             _pressIndex += 1;
             print(_pressIndex);
-        }else if(Input.GetMouseButtonDown(0) && (_barHash.anchoredPosition.x <= _clickLeftPos || _barHash.anchoredPosition.x >= _clickRightPos)){
+        }else if(Input.GetMouseButtonDown(0) && (_barHash.anchoredPosition.x <= _clickLeftPos || _barHash.anchoredPosition.x >= _clickRightPos) && _pressIndex < _maxPress){
             _animator.SetTrigger("Goofed");
             _camAnim.SetTrigger("Goofed");
             _dadPushAnim.SetTrigger("Goofed");
