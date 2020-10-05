@@ -60,7 +60,7 @@ public class FishingBeetle : MonoBehaviour
             }
         }
 
-        if (_fishIndex == 3){
+        if (_fishIndex == 4){
             _buttonTime -= Time.deltaTime;
             if(_buttonTime <= 0f){
                 _buttonText.SetActive(true);
