@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class TakeOfferButton : MonoBehaviour
 {
     [SerializeField] private string _sceneName = "TimeshareScene";
+    [SerializeField] private TimeshareBeetle _timeshareBeetle = null;
 
     // Update is called once per frame
     public void OnClick()
@@ -16,5 +17,12 @@ public class TakeOfferButton : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void OnAccept()
+    {
+        if(_timeshareBeetle){
+            _timeshareBeetle._offerAccepted = true;
+        }
     }
 }

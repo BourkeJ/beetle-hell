@@ -383,7 +383,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: {fileID: 402170172}
+  _beetleDialogueText: {fileID: 908768755}
+  _beetleDialogue: You did it!
+  _beetleWaitTime: 3
+  _sceneName: EndScene
   _hagglePressed: 0
+  _offerAccepted: 0
 --- !u!1 &402170170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,7 +1018,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 966721225}
         m_TargetAssemblyTypeName: TakeOfferButton, Assembly-CSharp
-        m_MethodName: OnClick
+        m_MethodName: OnAccept
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1074,6 +1079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneName: EndScene
+  _timeshareBeetle: {fileID: 372100914}
 --- !u!1 &1264847377
 GameObject:
   m_ObjectHideFlags: 0
