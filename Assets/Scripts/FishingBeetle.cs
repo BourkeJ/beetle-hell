@@ -11,6 +11,7 @@ public class FishingBeetle : MonoBehaviour
     [SerializeField] private float _moveTime = 1f;
     [SerializeField] private float _clickLeftPos = 0f;
     [SerializeField] private float _clickRightPos = 0f;
+    [SerializeField] private Animator _slutAnim = null;
 
     private float _barPosY = 0f;
     private bool _atLeft = false;
@@ -46,9 +47,9 @@ public class FishingBeetle : MonoBehaviour
         //on click in green, print "pressed", on click outside green, print "goofed"
         if (Input.GetMouseButtonDown(0) && _barHash.anchoredPosition.x >= _clickLeftPos && _barHash.anchoredPosition.x <= _clickRightPos) 
         {
-            print("pressed");
+            _slutAnim.SetTrigger("Pressed");
         }else if(Input.GetMouseButtonDown(0) && (_barHash.anchoredPosition.x <= _clickLeftPos || _barHash.anchoredPosition.x >= _clickRightPos)){
-            print("goofed");
+            _slutAnim.SetTrigger("Goofed");
         }
     }
 }
