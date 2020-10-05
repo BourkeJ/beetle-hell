@@ -15,6 +15,9 @@ public class FishingBeetle : MonoBehaviour
     [SerializeField] private float _buttonTime = 1f;
     [SerializeField] private GameObject _buttonText = null;
 
+    [SerializeField] private RectTransform _clickLeftPosTransform = null;
+    [SerializeField] private RectTransform _clickRightPosTransform = null;
+
     private float _barPosY = 0f;
     private bool _atLeft = false;
     private float _movePos = 1f;
@@ -25,6 +28,8 @@ public class FishingBeetle : MonoBehaviour
     {
         _barPosY = _barHash.anchoredPosition.y;
         _buttonText.SetActive(false);
+        _clickLeftPos = _clickLeftPosTransform.anchoredPosition.x;
+        _clickRightPos = _clickRightPosTransform.anchoredPosition.x;
     }
 
     // Update is called once per frame
