@@ -27,8 +27,8 @@ public class DungBeetleMove : MonoBehaviour
     [SerializeField] private float _barRightPos = 10f;
     [SerializeField] private float _moveTime = 1f;
 
-    //[SerializeField] private float _clickLeftPosTransform = null;
-    //[SerializeField] private float _clickRightPosTransform = null;
+    [SerializeField] private RectTransform _clickLeftPosTransform = null;
+    [SerializeField] private RectTransform _clickRightPosTransform = null;
 
     [SerializeField] private GameObject _doorGlow = null;
     [SerializeField] private GameObject _dadDialogue = null;
@@ -68,8 +68,8 @@ public class DungBeetleMove : MonoBehaviour
         _dadTimer = _dadWaitTime;
         _kidTimer = _kidWaitTime;
 
-        //_clickLeftPos = _clickLeftPosTransform.anchoredPosition.x;
-        //_clickRightPos = _clickRightPosTransform.anchoredPosition.x;
+        _clickLeftPos = _clickLeftPosTransform.anchoredPosition.x;
+        _clickRightPos = _clickRightPosTransform.anchoredPosition.x;
     }
 
     // Update is called once per frame
