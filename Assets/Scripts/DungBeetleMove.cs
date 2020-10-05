@@ -110,7 +110,9 @@ public class DungBeetleMove : MonoBehaviour
             _dadPushAnim.SetTrigger("Goofed");
             _ballPushAnim.SetTrigger("Goofed");
             _goofIndex += 1;
-            _pressIndex -= 1;
+            if(_pressIndex - 1 >= 0){
+                _pressIndex -= 1;
+            }
         }
 
         //if you don't click for three times, beetle boss comes out
