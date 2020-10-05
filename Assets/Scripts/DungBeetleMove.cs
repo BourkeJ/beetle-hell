@@ -38,7 +38,7 @@ public class DungBeetleMove : MonoBehaviour
     [SerializeField] private float _kidWaitTime = 0f;
     [SerializeField] private int _maxGoof = 3;
     [SerializeField] private int _maxPress = 7;
-    [SerializeField] private GameObject _bar = null;
+    //[SerializeField] private GameObject _bar = null;
 
     [SerializeField] private Animator _camAnim = null;
     [SerializeField] private Animator _dadPushAnim = null;
