@@ -12,4 +12,9 @@ public class TakeOfferButton : MonoBehaviour
     {
         SceneManager.LoadScene(_sceneName);
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
